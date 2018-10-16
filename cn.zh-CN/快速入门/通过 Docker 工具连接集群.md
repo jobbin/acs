@@ -8,11 +8,11 @@
     1.  登录[容器服务管理控制台](https://cs.console.aliyun.com/?spm=a2c4g.11186623.2.4.AmPWm2#/overview/all)。
     2.  在Swarm菜单下，单击左侧导航栏中的**集群**，在集群列表中选择一个集群并单击**管理**。
 
-         ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6870/15395964526069_zh-CN.png) 
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6870/15396894016069_zh-CN.png)
 
         您可以查看集群的连接信息，如下图所示。
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6870/15395964526070_zh-CN.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6870/15396894016070_zh-CN.png) 
 
 2.  下载和保存证书。
 
