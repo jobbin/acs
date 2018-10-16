@@ -5,20 +5,20 @@ Container Service is fully compatible with the [Docker Swarm API](https://docs.d
 ## Install a certificate {#section_cnm_tmf_vdb .section}
 
 1.  Obtain the access address.
-    1.  Log on to the [Container Service console](https://partners-intl.console.aliyun.com/#/cs%20%22Container%20Service%20console%22).
-    2.  Click **Clusters** in the left-side navigation pane. On the Cluster List page, click **Manage** at the right of a cluster.
+    1.  Log on to the [Container Service console](https://partners-intl.console.aliyun.com/#/cs).
+    2.  Under Swarm, click **Clusters** in the left-side navigation pane. In the cluster list, click **Manage** at the right of a cluster.
 
-        ![](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/pic/25983/cn_zh/1509936787945/Image%202.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6870/15396912876069_en-US.png)
 
-        The cluster details page appears, showing the cluster connection information.
+        As shown in the following figure, the cluster connection information is displayed.
 
-        ![](http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/assets/pic/25983/cn_zh/1510020587388/connect2.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6870/15396912876070_en-US.png) 
 
 2.  Download and save the TLS certificate.
 
-    Configure a TLS certificate before using the preceding access address to access the Docker cluster.
+    Configure a TLS certificate before you use the preceding access address to access the Docker cluster.
 
-    Click **Download Certificate**in the cluster details page to download the TLS certificate.  The certFiles.zip file is downloaded.  In the following example, the downloaded certificate is saved to the ~/.acs/certs/ClusterName/directory. ClusterName indicates the name of your cluster.  You can save the certificate to a different directory, but we recommend that you use the ~/.acs/certs/ClusterName/ directory for easy management.
+    Click **Download Certificate**in the cluster details page to download the TLS certificate. The certFiles.zip file is downloaded. In the following example, the downloaded certificate is saved to the ~/.acs/certs/ClusterName/directory. ClusterName indicates the name of your cluster. You can save the certificate to a different directory, but we recommend that you use the ~/.acs/certs/ClusterName/ directory for easy management.
 
     ```
     mkdir ~/.acs/certs/ClusterName/ #Replace ClusterName with your cluster name 
@@ -40,14 +40,14 @@ You can use Docker client to access the container clusters of Container Service.
 
     ```
     docker --tlsverify --tlscacert=~/.acs/certs/ClusterName/ca.pem --tlscert=~/.acs/certs/ClusterName/cert.pem --tlskey=~/.acs/certs/ClusterName/key.pem \
-    -H=tcp://master4g5.cs-cn-hangzhou.aliyun.com:21003 ps #Replace ClusterName and tcp://master4g5.cs-cn-hangzhou.aliyun.com:21003 with the actual path and access address
+    -H=tcp://master2g1.cs-cn-Qingdao.aliyun.com:11599 ps #Replace ClusterName and tcp://master2g1.cs-cn-Qingdao.aliyun.com:11599 with the actual path and access address.
     ```
 
 -   Environment variables
 
     ```
     export DOCKER_TLS_VERIFY="1"
-    export DOCKER_HOST="tcp://master4g5.cs-cn-hangzhou.aliyun.com:21003" #Replace tcp://master4g5.cs-cn-hangzhou.aliyun.com:21003 with the actual access address
+    export DOCKER_HOST="tcp://master2g1.cs-cn-Qingdao.aliyun.com:11599" #Replace tcp://master2g1.cs-cn-Qingdao.aliyun.com:11599 with the actual access address
     export DOCKER_CERT_PATH=~/.acs/certs/ClusterName #Replace ClusterName with the actual path
     docker ps
     ```
@@ -61,14 +61,14 @@ Docker Compose supports declaring an access address and a certificate by using e
 
 ```
 export DOCKER_TLS_VERIFY="1"
-export DOCKER_HOST="tcp://master4g5.cs-cn-hangzhou.aliyun.com:21003"
-export DOCKER_CERT_PATH=~/.acs/certs/ClusterName #Replace ClusterName with the actual path
+export DOCKER_HOST="tcp://master2g1.cs-cn-Qingdao.aliyun.com:11599"
+export DOCKER_CERT_PATH=~/.acs/certs/ClusterName
 docker-compose up
 ```
 
 ## Revoke a certificate {#section_sq5_34f_vdb .section}
 
-If your downloaded certificate is accidentally leaked during usage, revoke the certificate as soon as possible. Click **Revoke Downloaded Certificate** in the cluster details page to revoke the downloaded certificate.  Then, you can download a new certificate.
+If your downloaded certificate is accidentally leaked during usage, revoke the certificate as soon as possible. Click **Revoke Downloaded Certificate** in the cluster details page to revoke the downloaded certificate. Then, you can download a new certificate.
 
-**Note:** Clicking **Revoke Downloaded Certificate** will make the earlier downloaded certificate unavailable.
+**Note:** Clicking **Revoke Downloaded Certificate** makes the downloaded certificate unavailable.
 
