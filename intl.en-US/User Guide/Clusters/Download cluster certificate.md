@@ -5,11 +5,11 @@ With the downloaded certificate, you can connect to the endpoint exposed from th
 1.   Obtain the access address. 
     1.   Click  **Clusters** in the left-side navigation pane. On the Cluster List page, click **Manage** at the right of a cluster. 
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6998/15405489104821_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6998/15405491454821_en-US.png)
 
     2.   The cluster details page is displayed, showing the cluster connection information. 
 
-        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6998/15405489104822_en-US.png)
+        ![](http://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/6998/15405491454822_en-US.png)
 
 2.   Download and save the TLS certificate. 
 
@@ -24,6 +24,6 @@ With the downloaded certificate, you can connect to the endpoint exposed from th
      unzip certFiles.zip
     ```
 
-    The certFiles.zip file contains ca.pem, cert.pem,and key.pem.
+    The certFiles.zip file contains ca.pem, cert.pem, and key.pem.
 
 
