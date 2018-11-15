@@ -8,7 +8,7 @@ Format:
 aliyun.routing.port_$container_port: [http://]$domain|$domain_prefix[:$context_path]
 ```
 
-Field explanation:
+Field description:
 
 -   `$container_port`: container port. **Note:** This is not the host port.
 -   `$domain`: domain name. Enter a domain name.
